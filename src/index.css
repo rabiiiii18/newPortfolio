@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+body {
+  background-color: #ebf3f1;
+}
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  /* padding: 0 16px; */
+  /* border: 2px solid red; */
+}
+:root {
+  --primary: #438b73;
+  --text-color: #444;
+}
+.text-decoration {
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
+}
+.overlay::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+
+}
+.overlay:hover::after {
+  opacity: 0.6; 
+}
+
+.overlay:hover .overlay-hover {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
