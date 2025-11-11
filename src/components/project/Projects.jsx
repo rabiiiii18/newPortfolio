@@ -20,7 +20,7 @@ const Projects = () => {
                             </div>
                             <img
                                 className="h-full w-full object-cover"
-                                src="/public/projectImg/work1.jpg"
+                                src="/work1.jpg"
                                 alt=""
                             />
                         </div>

@@ -31,7 +31,7 @@ const Hero = () => {
 
           <img
             className="w-full h-full object-cover rounded-lg shadow-lg relative z-10"
-            src="/raviii.jpg"
+            src="/photo.webp"
             alt="Ravi"
           />
           {/* <div className="bg-[var(--primary)] h-[150px] w-[100%] absolute bottom-[-10px] left-0 z-0"></div> */}

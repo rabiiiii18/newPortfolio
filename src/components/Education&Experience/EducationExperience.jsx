@@ -7,7 +7,7 @@ const EducationExperience = () => {
             <div className='flex justify-between flex-col md:flex-row items-center my-10 gap-10'>
                 <div className=' bg-white rounded-xl md:w-1/2  w-full p-10'>
                     <h3 className='text-[24px] leading-[26px] text-[var(--text-color)] font-semibold'>Experience</h3>
-                    <div className='flex flex-col gap-8 my-8'>
+                    <div className='flex flex-col gap-8 pt-6 '>
                         <div className='flex gap-10'>
                             <div className="bg-[rgba(67,139,115,0.15)] p-3 rounded-md flex items-center h-max w-max">
                                 <BriefcaseBusiness size={30} color="var(--primary)" />
