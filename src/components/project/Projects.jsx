@@ -5,9 +5,9 @@ const Projects = () => {
     return (
         <div className='container'>
             <div className=' bg-white rounded-xl'>
-                <div className='flex justify-center items-center flex-col gap-4 md:p-10 py-6'>
+                <div className='flex justify-center items-center flex-col gap-4 py-6 md:px-1 px-4'>
                     <h2 className='md:text-[50px] md:leading-[60px] text-[24px] leading-[28px] font-semibold'>Works & Projects</h2>
-                    <h3 className=' max-w-2xl  text-center text-base md:leading-[28px] leading-[24px] font-nornal text-[var(--text-color)]'>Check out some of my design projects, meticulously crafted with love and dedication, each one reflecting the passion and soul I poured into every detail.</h3>
+                    <h3 className=' max-w-2xl  text-center text-base md:leading-[28px] leading-[24px] font-nornal text-[var(--text-color)]'>Take a look at my design projects — each one made with care, creativity, and attention to detail.</h3>
                 </div>
                 <div className='px-10 md:py-14 py-6  grid md:grid-cols-3 grid-cols-1 gap-10'>
                     <div className='border border-gray-300 rounded-bl-xl rounded-br-xl'>
