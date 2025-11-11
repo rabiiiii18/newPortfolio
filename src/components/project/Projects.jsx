@@ -5,7 +5,7 @@ const Projects = () => {
     return (
         <div className='container'>
             <div className=' bg-white rounded-xl'>
-                <div className='flex justify-center items-center flex-col gap-4 py-6 md:px-1 px-4'>
+                <div className='flex justify-center items-center flex-col gap-4 md:px-10 md:py-10 py-6 px-8 '>
                     <h2 className='md:text-[50px] md:leading-[60px] text-[24px] leading-[28px] font-semibold'>Works & Projects</h2>
                     <h3 className=' max-w-2xl  text-center text-base md:leading-[28px] leading-[24px] font-nornal text-[var(--text-color)]'>Take a look at my design projects — each one made with care, creativity, and attention to detail.</h3>
                 </div>

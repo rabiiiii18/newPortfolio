@@ -15,8 +15,8 @@ const Hero = () => {
   return (
     <div className="container  flex items-center justify-center">
       <div className="flex flex-col md:flex-row justify-between items-center">
-        <div className="md:w-[35%] w-full p-10 relative">
-          <div className="bg-[var(--primary)] h-[150px] w-[100%] absolute top-[-10px] left-0 z-0"></div>
+        <div className="md:w-[35%] w-full md:p-10 p-8 relative">
+          <div className="bg-[var(--primary)] md:h-[150px] h-[80px] w-[100%] absolute md:top-[-10px] top-[-2px] left-0 z-0"></div>
           <div className="flex justify-center items-center gap-5 absolute bottom-16 left-1/2 transform -translate-x-1/2 z-20">
             {socials.map(({ Icon, url }, index) => (
               <div
@@ -37,13 +37,13 @@ const Hero = () => {
           {/* <div className="bg-[var(--primary)] h-[150px] w-[100%] absolute bottom-[-10px] left-0 z-0"></div> */}
         </div>
 
-        <div className="md:w-[60%] w-full bg-white rounded-xl h-auto p-3 py-6 md:p-10 mx-4 sm:mx-6">
+        <div className="md:w-[60%] w-full bg-white rounded-xl h-auto  px-8 py-6 md:px-10 md:py-10">
           <h3 className='text-[20px] leading-[28px] font-normal text-[var(--text-color)]'>Hello there!</h3>
-          <h1 className='text-[48px] font-bold leading-[58px] uppercase mt-8 '>I'm <span className='text-decoration'>ravi shrestha</span>,  I create beautifully minimal<span className='text-decoration'> code and designs </span> with <span className='text-decoration'>passion.</span>  </h1>
+          <h1 className='md:text-[48px] text-[30px] font-bold md:leading-[58px] leading-[40px] uppercase mt-8 '>I'm <span className='text-decoration'>ravi shrestha</span>,  I create beautifully minimal<span className='text-decoration'> code and designs </span> with <span className='text-decoration'>passion.</span>  </h1>
           <div className="my-[20px]">
-            <span className='text-[18px]'>I'm <ReactTyped
-              className=" text-[18px] tracking-widest font-bold text-[var(--primary)]"
-              strings={["Frontend Developer", "React Enthustic", "Wordpress Developer"]}
+            <span className='md:text-[18px] text-base leading-[30px]'>I'm <ReactTyped
+              className="md:text-[18px] text-base tracking-widest font-bold text-[var(--primary)]"
+              strings={["Frontend Developer", "React Enthusiast", "Wordpress Developer"]}
               typeSpeed={50}
               backSpeed={30}
               loop
@@ -56,7 +56,7 @@ const Hero = () => {
             </p> */}
           </div>
           <div>
-            <button className='px-4 py-3 bg-[var(--primary)] cursor-pointer rounded-md text-white text-[16px] leading-[20px] font-normal hover:bg-[#161616]  transition-all ease-in border-0 outline-0'>Download CV</button>
+            <button className='px-4 py-3 bg-[var(--primary)] cursor-pointer rounded-md text-white md:text-[16px] text-[14px] leading-[20px] font-semibold hover:bg-[#161616]  transition-all ease-in border-0 outline-0'>Download CV</button>
           </div>
         </div>
 

@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
 
             <span
-                className="mt-6 text-[#141414] font-semibold"
+                className="mt-6 text-[#141414] text-base font-semibold"
 
             >
                 © Copyright All rights reserved RaviShrestha
