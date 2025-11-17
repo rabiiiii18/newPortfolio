@@ -12,6 +12,13 @@ const Hero = () => {
     { Icon: Linkedin, url: "https://www.linkedin.com/in/ravi-shrestha-279077238/" },
     { Icon: Github, url: "https://github.com/rabiiiii18" },
   ];
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/ravi-shrestha-cv.pdf';
+    link.download = 'raviCV.pdf';
+    link.click();
+  };
   return (
     <div className="container  flex items-center justify-center">
       <div className="flex flex-col md:flex-row justify-between items-center">
@@ -56,7 +63,7 @@ const Hero = () => {
             </p> */}
           </div>
           <div>
-            <button className='px-4 py-3 bg-[var(--primary)] cursor-pointer rounded-md text-white md:text-[16px] text-[14px] leading-[20px] font-semibold hover:bg-[#161616]  transition-all ease-in border-0 outline-0'>Download CV</button>
+            <button onClick={handleDownload} className='px-4 py-3 bg-[var(--primary)] cursor-pointer rounded-md text-white md:text-[16px] text-[14px] leading-[20px] font-semibold hover:bg-[#161616]  transition-all ease-in border-0 outline-0'>Download CV</button>
           </div>
         </div>
 

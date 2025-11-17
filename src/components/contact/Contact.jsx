@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Form from '../Form'
 import { ArrowUpRight, Copy, Github, Instagram, InstagramIcon, Linkedin, LinkedinIcon, Mail, MapPinHouse, Phone } from 'lucide-react'
 
 const Contact = () => {
+  const [copied, setCopied] = useState('');
   return (
     <div className="container">
       <div className='flex justify-center items-center flex-col gap-4  py-6 px-8 md:px-10 md:py-10 '>
@@ -30,10 +31,31 @@ const Contact = () => {
           <div className=' p-6 flex flex-col gap-2 bg-white rounded-xl mb-5 md:mb-0'>
             <div className='flex  gap-6 p-2  items-center hover:bg-[#ebf3f1] cursor-pointer rounded-xl'>
               <Github size={35} className='text-[var(--primary)]' />
-              <div className='flex justify-between w-full items-center'>
+              <div
+                className='flex justify-between w-full items-center cursor-pointer hover:opacity-80 transition-opacity'
+                onClick={() => window.open('https://github.com/rabiiiii18', '_blank')}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    window.open('https://github.com/rabiiiii18', '_blank');
+                  }
+                }}
+              >
                 <div>
                   <p>Follow me on Github</p>
-                  <p className='flex items-center gap-2'><Copy size={18} />@ravi</p>
+                  <p
+                    className='flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity'
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigator.clipboard.writeText('@rabiiiii18');
+                      setCopied('github');
+                      setTimeout(() => setCopied(''), 2000);
+                    }}
+                  >
+                    <Copy size={18} />{copied === 'github' ? 'Copied!' : '@rabiiiii18'}
+                  </p>
+
                 </div>
                 <div>
                   <ArrowUpRight className='text-[var(--primary)]' />
@@ -42,10 +64,31 @@ const Contact = () => {
             </div>
             <div className='flex  gap-6 p-2  items-center  hover:bg-[#ebf3f1] cursor-pointer rounded-xl'>
               <LinkedinIcon size={35} className='text-[var(--primary)]' />
-              <div className='flex justify-between w-full items-center'>
+              <div
+                className='flex justify-between w-full items-center cursor-pointer hover:opacity-80 transition-opacity'
+                onClick={() => window.open('https://www.linkedin.com/in/ravi-shrestha-279077238/', '_blank')}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    window.open('https://www.linkedin.com/in/ravi-shrestha-279077238/', '_blank');
+                  }
+                }}
+              >
                 <div>
                   <p>Connect on Linkedin</p>
-                  <p className='flex items-center gap-2'><Copy size={18} />@ravi</p>
+                  <p
+                    className='flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity'
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigator.clipboard.writeText('@ravi-shrestha');
+                      setCopied('linkedin'); 
+                      setTimeout(() => setCopied(''), 2000);
+                    }}
+                  >
+                    <Copy size={18} />{copied === 'linkedin' ? 'Copied!' : '@ravi-shrestha'}
+                  </p>
+
                 </div>
                 <div>
                   <ArrowUpRight className='text-[var(--primary)]' />
@@ -54,10 +97,30 @@ const Contact = () => {
             </div>
             <div className='flex  gap-6 p-2  items-center  hover:bg-[#ebf3f1] cursor-pointer  rounded-xl'>
               <InstagramIcon size={35} className='text-[var(--primary)]' />
-              <div className='flex justify-between w-full items-center'>
+              <div
+                className='flex justify-between w-full items-center cursor-pointer hover:opacity-80 transition-opacity'
+                onClick={() => window.open('https://www.instagram.com/rabiii_404/', '_blank')}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    window.open('https://www.instagram.com/rabiii_404/', '_blank');
+                  }
+                }}
+              >
                 <div>
                   <p>Follow me on Instagram</p>
-                  <p className='flex items-center gap-2'><Copy size={18} />@ravi</p>
+                  <p
+                    className='flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity'
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigator.clipboard.writeText('@rabiii-404');
+                      setCopied('instagram'); 
+                      setTimeout(() => setCopied(''), 2000);
+                    }}
+                  >
+                    <Copy size={18} />{copied === 'instagram' ? 'Copied!' : '@rabiii-404'}
+                  </p>
                 </div>
                 <div>
                   <ArrowUpRight className='text-[var(--primary)]' />
