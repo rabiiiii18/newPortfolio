@@ -1,8 +1,33 @@
 import React from "react";
+import { ToastContainer, toast } from 'react-toastify';
 const Form = () => {
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+      
+        formData.append("access_key", "4379bd16-faac-4815-84c4-ef24f6199b80");
+      
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+      
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: json
+        }).then((res) => res.json());
+      
+        if (res.success) {
+            toast.success("Message sent successfully.");
+            event.target.reset();
+        }
+      };
+      
     return (
         <div className="bg-white p-8 rounded-xl">
-            <form>
+            <form onSubmit={onSubmit}>
                 <div className="flex lg:gap-15  gap-5 flex-col lg:flex-row items-center">
                     <input
                         type="text"
@@ -46,7 +71,7 @@ const Form = () => {
                     ></textarea>
                 </div>
                 <div>
-                    <button
+                    <button type="submit"
 
                         className="border px-3 py-3 rounded-md md:text-[18px] text-base  font-semibold cursor-pointer bg-[var(--primary)] text-[#fff]"
                     >
